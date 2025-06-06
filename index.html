@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>FFTeamFinder</title>
+  <script type="module" src="script.js" defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    .player {
+      background: #1e1e1e;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+      border-radius: 10px;
+    }
+    .chat {
+      margin-top: 30px;
+      background-color: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .chat-message {
+      text-align: left;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 FFTeamFinder</h1>
+
+  <input id="playerId" placeholder="أدخل ID الخاص بك" />
+  <select id="gameType">
+    <option value="كلاسيك">كلاسيك</option>
+    <option value="رانكد">رانكد</option>
+  </select>
+  <button id="joinBtn">البحث عن لاعبين</button>
+
+  <div id="playersList"></div>
+
+  <div class="chat">
+    <h3>💬 دردشة</h3>
+    <div id="messages"></div>
+    <input id="chatInput" placeholder="اكتب رسالة..." />
+    <button id="sendBtn">إرسال</button>
+  </div>
+
+</body>
+</html>
